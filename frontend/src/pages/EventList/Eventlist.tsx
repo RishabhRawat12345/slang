@@ -12,7 +12,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:8080/api/getdata")
+        const res = await fetch(" https://slang-14j1.onrender.com/api/getdata")
         if (!res.ok) throw new Error("Failed to fetch events")
 
         const response = await res.json()
@@ -51,8 +51,6 @@ const EventList = () => {
           Discover, explore, and attend amazing events near you.
         </p>
       </div>
-
-      {/* 🔍 Search Bar */}
       <motion.div
         className="flex justify-center mb-12"
         initial={{ opacity: 0, y: -20 }}
@@ -70,8 +68,6 @@ const EventList = () => {
           />
         </div>
       </motion.div>
-
-      {/* Event Cards */}
       {filteredEvents.length === 0 ? (
         <p className="text-gray-400 text-center text-lg">No events found</p>
       ) : (
@@ -104,8 +100,6 @@ const EventList = () => {
                   year: "numeric",
                 })}
               </p>
-
-              {/* 👥 Participants Info */}
               <div className="bg-white/5 border border-white/10 rounded-xl p-3 mt-3 mb-4 text-sm flex justify-between">
                 <p className="text-gray-300">
                   👥 <span className="font-semibold">Current:</span>{" "}

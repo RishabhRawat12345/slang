@@ -19,7 +19,7 @@ export default function EventDetails() {
     const fetchEvent = async () => {
       try {
         console.log("the id is", id);
-        const res = await fetch(`http://localhost:8080/api/getbyid/${id}`);
+        const res = await fetch(` https://slang-14j1.onrender.com/api/getbyid/${id}`);
         const data = await res.json();
         console.log(data);
         setEvent(data.data);
@@ -48,8 +48,6 @@ export default function EventDetails() {
         <p className="text-gray-400 mb-4">
           🗓️ {new Date(event.date).toLocaleString("en-IN")}
         </p>
-
-        {/* Participants Section */}
         <div className="flex items-center justify-between bg-white/5 rounded-xl p-4 mb-4 border border-white/10">
           <p className="text-gray-300">
             👥 <span className="font-semibold">Current Participants:</span>{" "}
