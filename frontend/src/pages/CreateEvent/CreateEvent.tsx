@@ -41,7 +41,7 @@ const CreateEvent = () => {
 
   const onSubmit = async (data: EventForm) => {
     console.log(data)
-    const createdRes = await fetch("http://localhost:8080/api/create", {
+    const createdRes = await fetch(" https://slang-14j1.onrender.com/api/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
